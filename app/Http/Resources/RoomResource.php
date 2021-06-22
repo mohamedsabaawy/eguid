@@ -22,7 +22,7 @@ class RoomResource extends JsonResource
           'updated_at' => $this->updated_at,
           'name' => $this->Hotel->name,
           'email' => $this->Hotel->email,
-          'cover' => ($this->Hotel->cover ? asset(STORAGE.$this->cover) : null),
+          'cover' => ($this->Hotel->cover ? asset(STORAGE.$this->Hotel->cover) : null),
           'city_id' => $this->Hotel->city_id,
           'user_id' => $this->user_id,
           'longitude' => $this->Hotel->longitude,
