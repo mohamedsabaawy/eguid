@@ -19,34 +19,21 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
-class HotelController extends Controller
+class LandmarkController extends Controller
 {
-    public function city(Request $request)
-    {
-        $cities = City::where('country_id', $request->country_id)->get();
-        if (!count($cities) > 0)
-            return responseJson('0', 'please chose country');
-        return responseJson('1', 'success', $cities);
-    }
-
-    public function country()
-    {
-        $countries = Country::all();
-        return responseJson('1', '', $countries);
-    }
 
     public function index(Request $request)
     {
-        if ($request->hotel_id) {
-            return responseJson('1', 'success', new HotelResource(Hotel::hotel()->find($request->hotel_id)));
+        if ($request->landmark_id) {
+            return responseJson('1', 'success', new LandmarkResource(Landmark::find($request->landmark_id)));
         }
 
         if($request->city_id){
             return responseJson('1','',
-            HotelResource::collection(Hotel::hotel()->where('city_id',$request->city_id)->paginate(PAGINATE)));
+            HotelResource::collection(Landmark::where('city_id',$request->city_id)->paginate(PAGINATE)));
         }
 
-        return responseJson('1','',HotelResource::collection(Hotel::hotel()->paginate(PAGINATE)));
+        return responseJson('1','',LandmarkResource::collection(Landmark::all()));
     }
 
     public function search(Request $request)

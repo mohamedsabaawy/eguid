@@ -20,7 +20,7 @@ class ClientController extends Controller
         $request->validate([
             'name' => 'required',
             'password' => 'required|confirmed',
-            'email' => 'required|unique:hotels|unique:users|unique:clients',
+            'email' => 'required|email|unique:hotels|unique:users|unique:clients',
 //            'password' => 'required|confirmed',
         ]);
         $client = Client::create([
