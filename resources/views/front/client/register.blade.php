@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="margin-top: 20ch">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -84,6 +84,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <a href="{{route('client.form.login')}}" class="btn btn-primary"     >{{ __('Login') }}</a>
                             </div>
                         </div>
                     </form>

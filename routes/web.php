@@ -18,6 +18,7 @@ define('PAGINATE', 1);
 
 Route::get('/', function () {
     $cities = \App\Models\City::all();
+    $room = \App\Models\HotelRoom::where('client_id',null);
     return view('front.welcome',compact([
         'cities',
 
@@ -43,8 +44,8 @@ Route::group(['namespace' => 'Front'], function () {
         Route::post('client/register' , 'ClientController@register')->name('client.register');
         Route::get('client/login' , 'ClientController@loginForm')->name('client.form.login')->middleware('guest:client');
         Route::post('client/login' , 'ClientController@login')->name('client.login');
-        Route::get('client/logout' , 'ClientController@logout')->name('client.logout');
-        Route::post('client/room' , 'ClientController@room')->name('room1');
+        Route::post('client/logout' , 'ClientController@logout')->name('client.logout');
+            Route::post('client/room' , 'ClientController@room')->name('room1')->middleware('auth:client');
     });
 
 });

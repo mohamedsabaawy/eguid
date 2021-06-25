@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('front'.'/main.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
-    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+{{--    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>--}}
     <style>
         .header {
             background: none;
@@ -181,20 +181,35 @@
                     </span>
 
     <ul class="navbar">
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">User</a>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
+        @auth('client')
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">{{auth('client')->user()->name}}</a>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <form action="{{route('client.logout')}}" method="post">
+                        @csrf
+                        <button class="btn log-out">log out</button>
+                    </form>
+                </div>
+            </li>
+        @endauth
+
+        <li><a href="{{route('front.welcome')}}">home</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#rooms">rooms</a></li>
 
     </ul>
 
-
-    <button class="btn log-out">log out</button>
-    <button class="btn sign-up">sign up</button>
-    <button class="btn log-in">log in</button>
+    @guest('client')
+        <form action="{{route('client.form.register')}}" method="get">
+            @csrf
+            <button class="btn sign-up">sign up</button>
+        </form>
+        <form action="{{route('client.form.login')}}" method="get">
+            @csrf
+            <button class="btn log-in">log in</button>
+        </form>
+    @endguest
 </div>
 <!-- end of side navbar -->
 
@@ -281,6 +296,6 @@
 </footer>
 <!-- end of footer -->
 
-<script src="script.js"></script>
+<script src="{{asset('front/script.js')}}"></script>
 </body>
 </html>

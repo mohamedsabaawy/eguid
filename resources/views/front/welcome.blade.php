@@ -6,8 +6,25 @@
     <title>HOME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('front/main.css')}}">
-    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+{{--    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>--}}
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+    <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #2e2e2e;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            border-bottom: 0.5px solid rgba(71, 71, 70, 0.3);
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -27,25 +44,50 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est quos veniam impedit numquam itaque
             voluptatum, dicta asperiores accusamus, eligendi neque ut incidunt, modi harum molestiae atque natus officia
             minima.</p>
-        <button type="button" class="head-btn">GET STARTED</button>
+        <a href="#services"><button type = "button" class = "head-btn" >GET STARTED</button></a>
     </div>
 </header>
 <!-- end of header -->
 
 <!-- side navbar -->
+
 <div class="sidenav" id="sidenav">
-            <span class="cancel-btn" id="cancel-btn">
-                <i class="fas fa-times"></i>
-            </span>
+                    <span class="cancel-btn" id="cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </span>
 
     <ul class="navbar">
-        <li><a href="{{route('home')}}">home</a></li>
+        @auth('client')
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">{{auth('client')->user()->name}}</a>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <form action="{{route('client.logout')}}" method="post">
+                        @csrf
+                        <button class="btn log-out">log out</button>
+                    </form>
+                </div>
+            </li>
+        @endauth
+
+        <li><a href="{{route('front.welcome')}}">home</a></li>
         <li><a href="#services">services</a></li>
         <li><a href="#rooms">rooms</a></li>
+
     </ul>
-    <button  class="btn sign-up" >sign up</button >
-    <button class="btn log-in">log in</button>
+
+    @guest('client')
+        <form action="{{route('client.form.register')}}" method="get">
+            @csrf
+            <button class="btn sign-up">sign up</button>
+        </form>
+        <form action="{{route('client.form.login')}}" method="get">
+            @csrf
+            <button class="btn log-in">log in</button>
+        </form>
+    @endguest
 </div>
+
 <!-- end of side navbar -->
 
 <!-- fullscreen modal -->
@@ -148,7 +190,7 @@
         </div>
 
         <div class="form-item">
-            <label for="room">Number Of People: </label>
+            <label for="room">Rooms: </label>
             <select id="room" name="number">
                 @for($i=0;$i<11;$i++)
                     <option value="{{$i}}">{{$i}}</option>
@@ -167,7 +209,7 @@
 
 
         <div class="form-item">
-            <input type="submit" id="sub" class="btn" value="Book Now">
+            <input type="submit" id="sub" class="btn" value="search">
         </div>
     </form>
 </div>
@@ -307,6 +349,6 @@
 </footer>
 <!-- end of footer -->
 
-<script src="{{asset('front/'.'script.js')}}"></script>
+<script src="{{asset('front/script.js')}}"></script>
 </body>
 </html>

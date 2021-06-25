@@ -51,13 +51,26 @@ class ClientController extends Controller
     }
 
     public function room(Request $request){
+        $request->validate([
+            'start_at' => 'required|date',
+            'end_at' => 'required|date',
+            'number' => 'required',
+        ]);
+
+//        if(!strtotime($request->end_at) > strtotime($request->end_at))
+//            return redirect()->back()->with('status' ,'check out must be > check in');
         $d = strtotime($request->end_at) - strtotime($request->start_at) ;
+        if($d == 0){
+           return redirect()->back()->with('status','check out must be > check in');
+        }
         $day = $d / 86400;
         $room = HotelRoom::where([
             ['client_id',null],
             ['hotel_id',$request->hotel_id],
-            ['type_id',$request->type_id],
+            ['number',$request->number],
         ])->first();
+
+
         if ($room <> null){
             Auth::guard('client')->user()->HotelRooms()->attach($room,['start_at'=>$request->start_at ,'end_at'=>$request->end_at,'price'=>($room->RoomType->price * $day)]);
             $room->client_id = Auth::guard('client')->id();

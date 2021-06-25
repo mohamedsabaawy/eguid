@@ -23,7 +23,7 @@ class HotelController extends Controller
 {
     public function city(Request $request)
     {
-        $cities = City::where('country_id', $request->country_id)->get();
+        $cities = City::where('country_id', $request->country_id)->pluck('name' ,'id');
         if (!count($cities) > 0)
             return responseJson('0', 'please chose country');
         return responseJson('1', 'success', $cities);
@@ -31,7 +31,7 @@ class HotelController extends Controller
 
     public function country()
     {
-        $countries = Country::all();
+        $countries = Country::all()->pluck('name' , 'id');
         return responseJson('1', '', $countries);
     }
 

@@ -13,7 +13,7 @@ class CreateClientHotelRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('client_hotel_rooms', function (Blueprint $table) {
+        Schema::create('client_hotel_room', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->integer('client_id');

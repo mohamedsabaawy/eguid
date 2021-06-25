@@ -27,7 +27,7 @@
                                 @foreach($rooms as $room)
                                     <div class="card card-header m-2 {{$room->client_id ? 'border border-danger' :''}}">
                                         <a class="btn" href="{{route('room.show',$room->id)}}"><p>{{$room->name}}</p></a>
-                                        <p class="badge badge-secondary">{{$room->RoomType->name}}</p>
+{{--                                        <p class="badge badge-secondary">{{$room->RoomType->name}}</p>--}}
                                         <p class="{{$room->client_id ? 'badge badge-danger' : ''}}">{{$room->client_id ? 'reserved' : ''}}</p>
                                         <a href="{{route('room.edit',$room->id)}}" class="btn btn-outline-warning m-auto"><i class="fa fa-edit"></i></a>
                                         <form class="m-auto" method="post" action="{{route('room.destroy',$room->id)}}">
