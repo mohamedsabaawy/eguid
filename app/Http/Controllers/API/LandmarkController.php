@@ -25,15 +25,14 @@ class LandmarkController extends Controller
     public function index(Request $request)
     {
         if ($request->landmark_id) {
-            return responseJson('1', 'success', new LandmarkResource(Landmark::find($request->landmark_id)));
+            return  new LandmarkResource(Landmark::find($request->landmark_id));
         }
 
         if($request->city_id){
-            return responseJson('1','',
-            HotelResource::collection(Landmark::where('city_id',$request->city_id)->paginate(PAGINATE)));
+            return HotelResource::collection(Landmark::where('city_id',$request->city_id)->paginate(PAGINATE));
         }
 
-        return responseJson('1','',LandmarkResource::collection(Landmark::all()));
+        return LandmarkResource::collection(Landmark::all());
     }
 
     public function search(Request $request)
@@ -44,7 +43,7 @@ class LandmarkController extends Controller
                 return responseJson('0', 'not found');
             $rooms = $city->HotelRooms;
             $rooms = $rooms->where('number', $request->number)->where('client_id', null)->unique('hotel_id');
-            return responseJson('1', 'success', RoomResource::collection($rooms));
+            return  RoomResource::collection($rooms);
         }
         return responseJson('0', 'not found');
     }
