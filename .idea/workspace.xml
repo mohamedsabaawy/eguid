@@ -5,31 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c3b477-8280-4d86-b380-55ceda0b79fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/front/images/customer-banner(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/front/images/sharm1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/front/images/sharm2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/front/images/sharm3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/front/images/sharm4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/front/images/sharm5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/front/images/sharm6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/VZqCwU0t5hEh3BVTcwCuxF0Rj1ydBOFnIVKQJFo8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/caUPvQCKAKvNtKt0PpMTEO8ZJYnoMSPjFDdVlu2a.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/HotelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/HotelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ClientHotelRoom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ClientHotelRoom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_16_193614_create_client_hotel_rooms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_16_193614_create_client_hotel_rooms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/front/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/front/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/hotel/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/hotel/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/client/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/client/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/client/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/client/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/hotel/searche.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/hotel/searche.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/hotel/room/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hotel/room/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -418,6 +397,7 @@
       <workItem from="1624393359268" duration="1942000" />
       <workItem from="1624459251639" duration="5231000" />
       <workItem from="1624594563091" duration="9650000" />
+      <workItem from="1624671172860" duration="1365000" />
     </task>
     <servers />
   </component>

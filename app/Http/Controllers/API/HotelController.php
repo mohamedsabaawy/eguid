@@ -23,30 +23,40 @@ class HotelController extends Controller
 {
     public function city(Request $request)
     {
-        $cities = City::where('country_id', $request->country_id)->pluck('name' ,'id');
+        $cities = City::where('country_id', $request->country_id)->get();
         if (!count($cities) > 0)
             return responseJson('0', 'please chose country');
+//        return response()->json($cities);
         return responseJson('1', 'success', $cities);
     }
 
-    public function country()
+
+    public function apicity(Request $request)
     {
-        $countries = Country::all()->pluck('name' , 'id');
+        $cities = City::where('country_id', $request->country_id)->get();
+        if (!count($cities) > 0)
+            return responseJson('0', 'please chose country');
+        return response()->json($cities);
+    }
+//
+    public function apicountry()
+    {
+        $countries = Country::all();
+        return response()->json($countries);
         return responseJson('1', '', $countries);
     }
 
     public function index(Request $request)
     {
         if ($request->hotel_id) {
-            return responseJson('1', 'success', new HotelResource(Hotel::hotel()->find($request->hotel_id)));
+            return  new HotelResource(Hotel::hotel()->find($request->hotel_id));
         }
 
         if($request->city_id){
-            return responseJson('1','',
-            HotelResource::collection(Hotel::hotel()->where('city_id',$request->city_id)->paginate(PAGINATE)));
+            return HotelResource::collection(Hotel::hotel()->where('city_id',$request->city_id)->paginate(PAGINATE));
         }
 
-        return responseJson('1','',HotelResource::collection(Hotel::hotel()->paginate(PAGINATE)));
+        return HotelResource::collection(Hotel::hotel()->paginate(PAGINATE));
     }
 
     public function search(Request $request)
@@ -57,7 +67,7 @@ class HotelController extends Controller
                 return responseJson('0', 'not found');
             $rooms = $city->HotelRooms;
             $rooms = $rooms->where('number', $request->number)->where('client_id', null)->unique('hotel_id');
-            return responseJson('1', 'success', RoomResource::collection($rooms));
+            return RoomResource::collection($rooms);
         }
         return responseJson('0', 'not found');
     }

@@ -152,17 +152,18 @@
             var country_id = $('#country').val();
             if(country_id){
                 $.ajax({
-                    url: '{{url('api/v1/city?country_id=')}}' + country_id,
+                    url: '{{url('api/v1/city1?country_id=')}}' + country_id,
                     type:'post',
                     success:function (data) {
                         if (data.status == 1){
 
                             $('#cities').empty();
                             $('#cities').append('<option>choice city</option>');
-                            $('#cities').append(data)
+                            // $('#cities').append(data)
                             $.each(data.data,function (index, city) {
-                                // $('#cities').append(data)
-                                // $('#cities').append('<option value="'+data+'">'+city.name+'</option>')
+                                $('#cities').append(data)
+                                $('#cities').append('<option value="'+data+'">'+city.name+'</option>')
+
                             })
                         }
                     },
