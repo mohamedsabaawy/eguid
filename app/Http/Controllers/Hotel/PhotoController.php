@@ -41,13 +41,10 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        $validation = Validator::make($request->all(),[
-            'photos' => 'required'
+        $request->validate([
+            'photos' => 'required|array',
+            'photos.*' => 'image',
         ]);
-
-        if ($validation->fails()){
-            return redirect()->back()->with('status' , 'error');
-        }
 //        dd($request->photos->store('hotelPhoto','public'));
         foreach ($request->photos as $photo)
         HotelPhoto::create([

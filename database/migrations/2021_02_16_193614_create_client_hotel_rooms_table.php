@@ -32,6 +32,6 @@ class CreateClientHotelRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_hotel_rooms');
+        Schema::dropIfExists('client_hotel_room');
     }
 }

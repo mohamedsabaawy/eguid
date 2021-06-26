@@ -10,6 +10,22 @@
                     <div class="form-group">
                         <label class="form-group">Upload Photos</label>
                         <input type="file" name="photos[]" multiple class="form-control">
+{{--                        @error('photos')--}}
+{{--                        <span class="invalid-feedback" role="alert">--}}
+{{--                            <strong>{{$message}}</strong>--}}
+{{--                        </span>--}}
+{{--                        @enderror--}}
+
+                        @error('photos')
+                        <span class="" style="color: red" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        @error('photos.*')
+                        <span class="" style="color: red" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary form-control">Upload</button>

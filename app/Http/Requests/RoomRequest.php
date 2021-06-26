@@ -24,8 +24,11 @@ class RoomRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'type_id' => 'required',
+            'name' => 'required|unique:hotel_rooms',
+//            'type_id' => 'required|integer',
+//            'view_id' => 'required|integer',
+            'number' => 'required|integer',
+            'price' => 'required|integer',
         ];
     }
 

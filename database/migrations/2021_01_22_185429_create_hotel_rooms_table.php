@@ -14,9 +14,9 @@ class CreateHotelRoomsTable extends Migration {
 			$table->string('price');
 			$table->integer('hotel_id')->unsigned();
 			$table->integer('client_id')->nullable();
-			$table->integer('type_id');
+			$table->integer('type_id')->nullable();
 			$table->integer('number');
-			$table->integer('view_id');
+			$table->integer('view_id')->nullable();
 		});
 	}
 

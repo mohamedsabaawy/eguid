@@ -50,7 +50,7 @@ Route::group(['namespace' => 'Front'], function () {
 
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 //----------------------admin routes----------------//
 
