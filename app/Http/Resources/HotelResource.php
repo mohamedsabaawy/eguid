@@ -29,7 +29,7 @@ class HotelResource extends JsonResource
           'latitude' => $this->latitude,
           'details' => $this->details,
           'photos' => ($request->hotel_id ? PhotoResource::collection($this->Photos) : null),
-          'reviews' => ($request->hotel_id ? PhotoResource::collection($this->Clients) : null),
+          'reviews' => ($request->hotel_id ? ReviewResource::collection($this->Clients) : null),
         ];
     }
 }
