@@ -12,6 +12,7 @@ use App\Models\Client;
 use App\Models\Country;
 use App\Models\Hotel;
 use App\Models\Landmark;
+use http\Env\Response;
 use function App\Sabaawy\responseJson;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
@@ -35,7 +36,7 @@ class HotelController extends Controller
     {
         $cities = City::where('country_id', $request->country_id)->get();
         if (!count($cities) > 0)
-            return responseJson('0', 'please chose country');
+            return response()->json(City::all());
         return response()->json($cities);
     }
 //

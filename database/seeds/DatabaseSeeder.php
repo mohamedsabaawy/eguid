@@ -9,7 +9,8 @@ class DatabaseSeeder extends Seeder {
 	{
 //		Model::unguard();
 		$this->call([
-		   AdminSeeder::class
+//		   AdminSeeder::class,
+		   ReviewSeeder::class,
         ]);
 	}
 }
