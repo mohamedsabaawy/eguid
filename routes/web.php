@@ -27,12 +27,12 @@ Route::get('/', function () {
 Route::group(['namespace' => 'Front'], function () {
 
     Route::post('search','HotelController@search')->name('hotel.search');
-    //hotel front end routes for client
+    //hotel frontend routes for client
     Route::group(['prefix' => 'hotels'],function (){
         Route::get('/', 'HotelController@index')->name('front.hotel.index');  ////show all hotels for client
         Route::get('/{hotel}', 'HotelController@show')->name('front.hotel.show');  ///show one hotel for client
     });
-    //hotel front end routes for client
+    //restaurant frontend routes for client
     Route::group(['prefix' => 'restaurants'],function (){
         Route::get('/', 'RestaurantController@index')->name('front.restaurant.index');  ////show all restaurants for client
         Route::get('/{restaurant}', 'RestaurantController@show')->name('front.restaurant.show');  ///show one restaurant for client
@@ -63,6 +63,8 @@ Route::group(['namespace' => 'BackEnd', 'middleware' => 'auth', 'prefix' => '/ad
     Route::resource('/landmark', 'LandmarkController');
     Route::post('landmark/upload','LandmarkController@upload')->name('landmark.upload');  //route for upload photo
     Route::post('landmark/delete/{landmarkPhoto}','LandmarkController@delete')->name('landmark.delete');  //route for delete photo
+    Route::get('review' , 'HotelController@reviewForm')->name('admin.review.form');
+    Route::post('review' , 'HotelController@review')->name('admin.review');
 });
 
 Route::group(['prefix' => '/home', 'namespace' => 'Hotel'], function () {

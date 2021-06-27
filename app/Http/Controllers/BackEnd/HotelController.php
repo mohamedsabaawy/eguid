@@ -5,8 +5,10 @@ namespace App\Http\Controllers\BackEnd;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\HotelRequest;
 use App\Models\City;
+use App\Models\Client;
 use App\Models\Country;
 use App\Models\Hotel;
+use App\Models\Review;
 use function App\Sabaawy\responseJson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -115,6 +117,21 @@ class HotelController extends Controller
         Storage::disk('public')->delete($hotel->cover);
         $hotel->delete();
         return redirect(route('hotel.index'))->with('status','Hotel deleted success');
+    }
+
+    public function review(Request $request)
+    {
+//        dd($request->all());
+        Review::create($request->all());
+        return redirect()->back()->with('status' , 'add');
+    }
+
+    public function reviewForm()
+    {
+        $hotels = Hotel::all()->pluck('name' , 'id');
+        $clients = Client::all()->pluck('name' , 'id');
+        $reviews = Review::all();
+        return view('backend.review' ,compact('hotels','clients' ,'reviews'));
     }
 
 }

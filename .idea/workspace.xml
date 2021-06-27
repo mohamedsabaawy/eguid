@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c3b477-8280-4d86-b380-55ceda0b79fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeds/ReviewSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotel/rvpPmLMzHJwLYL6906wnRtFGZQFbgratFQrWYr92.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/review.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/HotelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/HotelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/restaurant/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/restaurant/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/restaurant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/restaurant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/restaurant/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/restaurant/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +302,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload D:/htdocs/giud/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -307,11 +311,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\giud1\resources\views\backend" />
       <recent name="D:\htdocs\giud1\database\seeds" />
       <recent name="D:\htdocs\giud1\app\Http\Resources" />
       <recent name="D:\htdocs\giud1\app\Http\Controllers\API" />
       <recent name="D:\htdocs\giud1\public\front" />
-      <recent name="D:\htdocs\giud1\resources\views\front\hotel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\htdocs\giud\app\Http\Controllers\Hotel" />
@@ -400,7 +404,7 @@
       <workItem from="1624671172860" duration="2122000" />
       <workItem from="1624743663245" duration="547000" />
       <workItem from="1624744330192" duration="3276000" />
-      <workItem from="1624749702467" duration="1848000" />
+      <workItem from="1624749702467" duration="6998000" />
     </task>
     <servers />
   </component>

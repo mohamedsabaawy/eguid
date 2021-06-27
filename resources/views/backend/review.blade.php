@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
 
-                    <div class="card-header">Add new restaurant</div>
+                    <div class="card-header">Add comment</div>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -14,16 +14,16 @@
                     @endif
 
                     <div class="card-body">
-                        {!! Form::model($restaurant,[
-                            'route' => 'restaurant.store',
+                        {!! Form::model($reviews,[
+                            'route' => 'admin.review',
                             'method' => 'POST'
                         ]) !!}
                         <div class="form-group row">
-                            {!! Form::label('name', 'Restaurant Name', ['class' => 'col-sm-2 col-form-label']) !!}
+                            {!! Form::label('name', 'Title', ['class' => 'col-sm-2 col-form-label']) !!}
                             <div class="col-sm-10">
-                                {!! Form::text('name' ,null,['class' => 'form-control ' .($errors->has('name') ? 'is-invalid' : null) , 'placeholder' =>'Enter Restaurant Name' ]) !!}
+                                {!! Form::text('title' ,null,['class' => 'form-control ' .($errors->has('title') ? 'is-invalid' : null) , 'placeholder' =>'Enter title' ]) !!}
 
-                                @error('name')
+                                @error('title')
                                 <span class="invalid-feedback " style="display: block;" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -33,11 +33,11 @@
 
                         </div>
                         <div class="form-group row">
-                            {!! Form::label('email', 'Restaurant Email', ['class' => 'col-sm-2 col-form-label']) !!}
+                            {!! Form::label('email', 'Comment', ['class' => 'col-sm-2 col-form-label']) !!}
                             <div class="col-sm-10">
-                                {!! Form::email('email' ,null,['class' => 'form-control ' .($errors->has('email') ? 'is-invalid' : null), 'placeholder' =>'Enter Restaurant Email' ]) !!}
+                                {!! Form::text('comment' ,null,['class' => 'form-control ' .($errors->has('comment') ? 'is-invalid' : null), 'placeholder' =>'Enter comment' ]) !!}
 
-                                @error('email')
+                                @error('comment')
                                 <span class="invalid-feedback " style="display: block;" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -46,29 +46,33 @@
 
                             {{--                            <span class="invalid-feedback">{{$errors->has('email')? 'is-invalid':''}}</span>--}}
                         </div>
-                        <div class="form-group row">
-                            {!! Form::label('password', 'Restaurant Password', ['class' => 'col-sm-2 col-form-label']) !!}
-                            <div class="col-sm-10">
-                                {!! Form::password('password',['class' => 'form-control '  .($errors->has('password') ? 'is-invalid' : null), 'placeholder' =>'Enter Restaurant Password' ]) !!}
-                            </div>
-                        </div>
                         <div class="form-group row ">
-                            {!! Form::label('Countries', 'Country', ['class' => 'col-sm-2 col-form-label']) !!}
+                            {!! Form::label('Hotels', 'Country', ['class' => 'col-sm-2 col-form-label']) !!}
                             <div class="col-sm-10">
-                                {!! Form::select('country_id',$countries,null,[
+                                {!! Form::select('hotel_id',$hotels,null,[
                                     'class' => 'form-control ' .($errors->has('city_id') ? 'is-invalid' : null) ,
-                                    'id'=>'country',
-                                    'placeholder' => 'choice country'
+                                    'id'=>'hotel',
+                                    'placeholder' => 'choice hotel'
                                 ]) !!}
                             </div>
                         </div>
                         <div class="form-group row ">
-                            {!! Form::label('cities', 'City', ['class' => 'col-sm-2 col-form-label', 'placeholder' => 'City']) !!}
+                            {!! Form::label('clients', 'City', ['class' => 'col-sm-2 col-form-label', 'placeholder' => 'City']) !!}
                             <div class="col-sm-10">
-                                {!! Form::select('city_id',[],null,[
+                                {!! Form::select('client_id',$clients,null,[
                                 'class' => 'form-control ' .($errors->has('city_id') ? 'is-invalid' : null),
-                                'placeholder' => 'choice city',
-                                'id' => 'cities'
+                                'placeholder' => 'choice client',
+                                'id' => 'client_id'
+                                ]) !!}
+                            </div>
+                        </div>
+                        <div class="form-group row ">
+                            {!! Form::label('review', 'review', ['class' => 'col-sm-2 col-form-label', 'placeholder' => 'City']) !!}
+                            <div class="col-sm-10">
+                                {!! Form::select('review',[0,1,2,3,4,5],null,[
+                                'class' => 'form-control ' .($errors->has('review') ? 'is-invalid' : null),
+                                'placeholder' => 'choice review',
+                                'id' => 'review'
                                 ]) !!}
                             </div>
                         </div>
