@@ -1,12 +1,12 @@
 {{--@inject('cities' ,"App\Models\City::all()")--}}
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>HOME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('front/main.css')}}">
-{{--    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>--}}
+    {{--    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>--}}
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
     <style>
         .dropdown-content {
@@ -21,6 +21,7 @@
         .dropdown-content a {
             border-bottom: 0.5px solid rgba(71, 71, 70, 0.3);
         }
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
@@ -44,7 +45,9 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est quos veniam impedit numquam itaque
             voluptatum, dicta asperiores accusamus, eligendi neque ut incidunt, modi harum molestiae atque natus officia
             minima.</p>
-        <a href="#services"><button type = "button" class = "head-btn" >GET STARTED</button></a>
+        <a href="#services">
+            <button type="button" class="head-btn">GET STARTED</button>
+        </a>
     </div>
 </header>
 <!-- end of header -->
@@ -71,6 +74,7 @@
         @endauth
 
         <li><a href="{{route('front.welcome')}}">home</a></li>
+        <li><a href="{{route('front.restaurant.index')}}">restaurants</a></li>
         <li><a href="#services">services</a></li>
         <li><a href="#rooms">rooms</a></li>
 

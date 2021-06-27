@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('front'.'/main.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
-{{--    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>--}}
+    {{--    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>--}}
     <style>
         .header {
             background: none;
@@ -195,6 +195,7 @@
         @endauth
 
         <li><a href="{{route('front.welcome')}}">home</a></li>
+        <li><a href="{{route('front.restaurant.index')}}">restaurants</a></li>
         <li><a href="#services">services</a></li>
         <li><a href="#rooms">rooms</a></li>
 

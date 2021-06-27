@@ -134,6 +134,7 @@
         @endauth
 
         <li><a href="{{route('front.welcome')}}">home</a></li>
+        <li><a href="{{route('front.restaurant.index')}}">restaurants</a></li>
         <li><a href="#services">services</a></li>
         <li><a href="#rooms">rooms</a></li>
 
