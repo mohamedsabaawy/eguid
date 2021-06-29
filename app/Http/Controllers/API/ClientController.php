@@ -50,11 +50,7 @@ class ClientController extends Controller
 
     public function index(Request $request)
     {
-        if ($request->client_id){
-            $client =Client::find($request->client_id);
-            return responseJson('1','',new ClientResource($client));
-        }
         $client = Client::all();
-        return responseJson(1,'',ClientResource::collection($client));
+        return responseJson(1,'',new ClientResource($request->user()));
     }
 }

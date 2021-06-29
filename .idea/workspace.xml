@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c3b477-8280-4d86-b380-55ceda0b79fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/HotelMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RestaurantMiddleware.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +299,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload D:/htdocs/giud/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -305,11 +308,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\giud1\app\Http\Middleware" />
       <recent name="D:\htdocs\giud1\resources\views\backend" />
       <recent name="D:\htdocs\giud1\database\seeds" />
       <recent name="D:\htdocs\giud1\app\Http\Resources" />
       <recent name="D:\htdocs\giud1\app\Http\Controllers\API" />
-      <recent name="D:\htdocs\giud1\public\front" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\htdocs\giud\app\Http\Controllers\Hotel" />
@@ -400,7 +403,7 @@
       <workItem from="1624744330192" duration="3276000" />
       <workItem from="1624749702467" duration="9867000" />
       <workItem from="1624767275603" duration="1009000" />
-      <workItem from="1624928836534" duration="6554000" />
+      <workItem from="1624928836534" duration="11795000" />
     </task>
     <servers />
   </component>
