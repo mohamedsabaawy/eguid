@@ -383,7 +383,8 @@
     </article>
 
     @if (session('status'))
-        <div class="" style="color: #060606 ;border: #23ffe2 3px solid; background-color: #23ffe2 ; text-align: center" role="alert">
+        <div class="" style="color: #060606 ;border: #23ffe2 3px solid; background-color: #23ffe2 ; text-align: center"
+             role="alert">
             {{ session('status') }}
         </div>
     @endif
@@ -477,7 +478,7 @@
             <input type="date" id="chekout-date" name="end_at" required>
             <input type="hidden" id="chekout-date" value="{{$hotel->id}}" name="hotel_id">
             @error('end_at')
-                <span class="" style="color:red" role="alert">
+            <span class="" style="color:red" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
@@ -512,23 +513,24 @@
     </div>
     <div class="rooms-container">
 
-        @foreach($views as $view)
+    @foreach($views as $view)
 
-            <!-- single room -->
-                <article class="room">
-                    <div class="room-image">
-                        <img src="{{asset(STORAGE.$view->cover)}}" alt="room image">
-                    </div>
-                    <div class="room-text">
-                        <h3>{{$view->name}}</h3>
+        <!-- single room -->
+            <article class="room">
+                <div class="room-image">
+                    <img src="{{asset(STORAGE.$view->cover)}}" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>{{$view->name}}</h3>
+                    <span>price start from {{$view->HotelRoom()->min('price')}} .</span>
 
-                        <p>{{$view->details}}</p>
+                    <p>{{$view->details}}</p>
 
-                        <button type="button" class="btn">book now</button>
-                    </div>
-                </article>
-                <!-- end of single room -->
-            @endforeach
+                    <button type="button" class="btn">book now</button>
+                </div>
+            </article>
+            <!-- end of single room -->
+        @endforeach
 
     </div>
 </section>
