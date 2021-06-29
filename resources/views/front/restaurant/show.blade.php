@@ -345,7 +345,7 @@
 <!--Start Header-->
 <header>
     <div class="text">
-        <h2>Welcome</h2>
+        <h2>Welcome {{$restaurant->name}}</h2>
     </div>
 </header>
 <!--End Header-->
@@ -353,7 +353,7 @@
 <!--start About Us-->
 <div class="about-us">
     <div class="text">
-        <h2>{{$restaurant->name}}</h2>
+        <h2>Discover</h2>
         <h3>Our Story</h3>
         <p>We are a restaurant and coffee roastery since 1995 located on a busy corner site in Sharm El-Sheikh. With glazed frontage on two sides of the building, overlooking midtown.</p>
     </div>

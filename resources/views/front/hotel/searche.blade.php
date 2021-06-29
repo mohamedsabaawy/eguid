@@ -144,16 +144,16 @@
             $count = 0;
         @endphp
         @foreach($rooms as $room)
-            @if(count($room->Hotel->Clients) > 0)
+{{--            @if(count($room->Hotel->Clients) > 0)--}}
 
-                @foreach($room->Hotel->Clients as $client )
-                    @php
-                        $review +=$client->pivot->review;
-                        $count +=1;
-                    @endphp
-                    {{--            <h6 style="color: black">{{$client->pivot->review}}</h6>--}}
-                @endforeach
-            @endif
+{{--                @foreach($room->Hotel->Clients as $client )--}}
+{{--                    @php--}}
+{{--                        $review +=$client->pivot->review;--}}
+{{--                        $count +=1;--}}
+{{--                    @endphp--}}
+{{--                    --}}{{----}}{{--            <h6 style="color: black">{{$client->pivot->review}}</h6>--}}
+{{--                @endforeach--}}
+{{--            @endif--}}
             <a href="{{route('front.hotel.show',$room->Hotel->id)}}" id="link">
                 <article class="flex-container">
                     <div class="pic">
@@ -162,7 +162,7 @@
                     <div class="brief">
                         <h3>{{$room->Hotel->name}}</h3>
                         <p>{{$room->hotel->details}}</p>
-                        <h4>RATING: {{$review/($count > 0 ? $count : 1 )}} / 5</h4>
+                        <h4>RATING: {{number_format($room->hotel->rating)}} / 5</h4>
                     </div>
                 </article>
             </a>

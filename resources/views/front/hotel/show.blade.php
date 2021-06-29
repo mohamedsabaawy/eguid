@@ -375,24 +375,10 @@
             <img id="photo" src="{{asset(STORAGE.$hotel->cover)}}">
         </div>
 
-        @php
-            $review =0;
-            $count = 0;
-        @endphp
-        @if(count($hotel->Clients) > 0 )
-            @foreach($hotel->Clients as $client )
-                @php
-                    $review +=$client->pivot->review;
-                    $count +=1;
-                @endphp
-            @endforeach
-        @else
-        @endif
-
         <div class="brief">
             <h1>{{$hotel->name}}</h1>
             <p>{{$hotel->details}}</p>
-            <h3>RATING: {{$review / ($count > 0 ? $count : 1 )}} / 5</h3>
+            <h3>RATING: {{number_format($hotel->rating)}} / 5</h3>
         </div>
     </article>
 

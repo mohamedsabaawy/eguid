@@ -49,7 +49,7 @@ class Hotel extends Authenticatable
 
     public function getRatingAttribute()
     {
-
+        return $this->Clients()->average('review');
     }
 
 }
