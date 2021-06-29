@@ -21,8 +21,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group"> Type price</label>
-                    <input type='number' name="price" class="form-control" value="{{$type->price}}">
+                    <label class="form-group"> Type cover</label>
+                    <img width="100px" src="{{asset(STORAGE.$type->cover)}}">
+                    <input type='file' name="cover" class="form-control" >
 
                 </div>
                 <div class="form-group">

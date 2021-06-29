@@ -8,20 +8,20 @@
             <form class="form-group" action="{{route('type.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label class="form-group"> Type name</label>
+                    <label class="form-group"> View name</label>
                     <input type='text' name="name" class="form-control">
 
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group"> Type details</label>
+                    <label class="form-group"> View details</label>
                     <textarea name="details" class="form-control"></textarea>
 
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group"> Type price</label>
-                    <input type='number' name="price" class="form-control">
+                    <label class="form-group"> View cover</label>
+                    <input type='file' name="cover" class="form-control">
 
                 </div>
                 <div class="form-group">

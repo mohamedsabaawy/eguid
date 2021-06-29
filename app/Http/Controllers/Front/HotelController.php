@@ -27,7 +27,7 @@ class HotelController extends Controller
 
     public function show(Hotel $hotel)
     {
-        $rooms = $hotel->Rooms->where('client_id' , null)->unique('number');
-        return view('front.hotel.show',compact('hotel','rooms'));
+        $views = RoomType::where('hotel_id' ,$hotel->id)->get();
+        return view('front.hotel.show',compact('hotel','views'));
     }
 }

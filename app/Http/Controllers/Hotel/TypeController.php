@@ -48,7 +48,7 @@ class TypeController extends Controller
         $room = RoomType::create([
            'name'=>$request->name,
            'details'=>$request->details,
-           'price'=>$request->price,
+           'cover'=>$request->cover->store('view' , 'public'),
            'hotel_id'=>$request->user()->id,
         ]);
         return redirect()->route('type.index')->with('status' , 'add');
@@ -90,11 +90,19 @@ class TypeController extends Controller
     public function update(Request $request, $id)
     {
         $type = RoomType::find($id);
+
+        if(!$request->cover == null){
+            Storage::disk('public')->delete($type->cover);
+            $photo = $request->cover->store('view' ,'public');
+        }else{
+            $photo =$type->cover;
+        }
         $type->update([
             'name'=>$request->name,
             'details'=>$request->details,
-            'price'=>$request->price,
+            'cover'=> $photo,
         ]);
+//        return $type;
         return redirect()->route('type.index')->with('status' , 'room type updated');
     }
 
@@ -107,6 +115,7 @@ class TypeController extends Controller
     public function destroy($id)
     {
         $type = RoomType::find($id);
+        Storage::disk('public')->delete($type->cover);
         $type->delete();
         return redirect()->back()->with('status','room type deleted');
     }

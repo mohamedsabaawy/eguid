@@ -511,82 +511,24 @@
         <h2 id="rooms">rooms</h2>
     </div>
     <div class="rooms-container">
-        <!-- single room -->
-        <article class="room">
-            <div class="room-image">
-                <img src="images/img1.jpg" alt="room image">
-            </div>
-            <div class="room-text">
-                <h3>Luxury Rooms</h3>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime
-                    ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur
-                    incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat
-                    nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore,
-                    atque quo?</p>
+        @foreach($views as $view)
 
-                <button type="button" class="btn">book now</button>
-            </div>
-        </article>
-        <!-- end of single room -->
-        <!-- single room -->
-        <article class="room">
-            <div class="room-image">
-                <img src="images/img2.jpg" alt="room image">
-            </div>
-            <div class="room-text">
-                <h3>Luxury Rooms</h3>
+            <!-- single room -->
+                <article class="room">
+                    <div class="room-image">
+                        <img src="{{asset(STORAGE.$view->cover)}}" alt="room image">
+                    </div>
+                    <div class="room-text">
+                        <h3>{{$view->name}}</h3>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime
-                    ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur
-                    incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat
-                    nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore,
-                    atque quo?</p>
+                        <p>{{$view->details}}</p>
 
-                <button type="button" class="btn">book now</button>
-            </div>
-        </article>
-        <!-- end of single room -->
-        <!-- single room -->
-        <article class="room">
-            <div class="room-image">
-                <img src="images/img3.jpg" alt="room image">
-            </div>
-            <div class="room-text">
-                <h3>Luxury Rooms</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime
-                    ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur
-                    incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat
-                    nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore,
-                    atque quo?</p>
-
-                <button type="button" class="btn">book now</button>
-            </div>
-        </article>
-        <!-- end of single room -->
-        <!-- single room -->
-        <article class="room">
-            <div class="room-image">
-                <img src="images/img5.jpg" alt="room image">
-            </div>
-            <div class="room-text">
-                <h3>Luxury Rooms</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime
-                    ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur
-                    incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat
-                    nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore,
-                    atque quo?</p>
-
-                <button type="button" class="btn">book now</button>
-            </div>
-        </article>
-        <!-- end of single room -->
+                        <button type="button" class="btn">book now</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+            @endforeach
 
     </div>
 </section>

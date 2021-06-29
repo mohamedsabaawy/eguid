@@ -1,9 +1,9 @@
 @extends('layouts.hotel')
-@section('title',(auth('hotel')->user()->restaurant == null ? 'Room types' : 'Table types'))
+@section('title',(auth('hotel')->user()->restaurant == null ? 'Room view' : 'Table view'))
 
 @section('content')
     <div class="container">
-<a class="btn btn-primary" href="{{route('type.create')}}"> add new {{auth('hotel')->user()->restaurant == null ? 'room' : 'table'}} type</a>
+<a class="btn btn-primary" href="{{route('type.create')}}"> add new {{auth('hotel')->user()->restaurant == null ? 'room' : 'table'}} view</a>
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <div class="card-header">{{ Auth('hotel')->user()->name }} rooms types</div>
+                    <div class="card-header">{{ Auth('hotel')->user()->name }} rooms view</div>
 
                     <div class="card-body">
                         {{--                    @if(count($hotels) > 0 )--}}
@@ -24,7 +24,7 @@
                             </div>
                             <div class="row">
                                 @foreach($types as $type)
-                                    <div class="card card-header m-2 {{$type->client_id ? 'border border-danger' :''}}">
+                                    <div class="card card-header m-2 {{$type->client_id ? 'border border-danger' :''}}" >
                                         <p>{{$type->name}}</p>
                                         <p>price : {{$type->price}}</p>
                                         <p class="{{$type->client_id ? 'badge badge-danger' : ''}}">{{$type->client_id ? 'reserved' : ''}}</p>
