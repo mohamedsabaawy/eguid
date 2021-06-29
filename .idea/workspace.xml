@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c3b477-8280-4d86-b380-55ceda0b79fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/HotelMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RestaurantMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giud1.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/client/uiHLijl20epp9EPWdnUXTcA323AXTd2L6YCTYruD.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +403,7 @@
       <workItem from="1624744330192" duration="3276000" />
       <workItem from="1624749702467" duration="9867000" />
       <workItem from="1624767275603" duration="1009000" />
-      <workItem from="1624928836534" duration="11795000" />
+      <workItem from="1624928836534" duration="13646000" />
     </task>
     <servers />
   </component>

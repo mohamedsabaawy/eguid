@@ -23,6 +23,7 @@ Route::group(['namespace' => 'API' , 'prefix'=>'v1'],function (){
 
     Route::group(['middleware' => 'auth:api'],function (){
         Route::post('clients' ,'ClientController@index');
+        Route::post('update' ,'ClientController@update');
         Route::post('hotel' ,'HotelController@index');
         Route::post('search' ,'HotelController@search');
         Route::post('landmark' ,'LandmarkController@index');
