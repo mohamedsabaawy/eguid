@@ -30,12 +30,12 @@ Route::group(['namespace' => 'Front'], function () {
     //hotel frontend routes for client
     Route::group(['prefix' => 'hotels'],function (){
         Route::get('/', 'HotelController@index')->name('front.hotel.index');  ////show all hotels for client
-        Route::get('/{hotel}', 'HotelController@show')->name('front.hotel.show');  ///show one hotel for client
+        Route::get('/{hotel}', 'HotelController@show')->name('front.hotel.show')->middleware('hotel');  ///show one hotel for client
     });
     //restaurant frontend routes for client
     Route::group(['prefix' => 'restaurants'],function (){
         Route::get('/', 'RestaurantController@index')->name('front.restaurant.index');  ////show all restaurants for client
-        Route::get('/{restaurant}', 'RestaurantController@show')->name('front.restaurant.show');  ///show one restaurant for client
+        Route::get('/{restaurant}', 'RestaurantController@show')->name('front.restaurant.show')->middleware('restaurant');  ///show one restaurant for client
     });
 
     //client routes
@@ -86,6 +86,7 @@ Route::group(['prefix' => '/home', 'namespace' => 'Hotel'], function () {
         Route::get('reserve','ReservationController@index')->name('hotel.reserve');
         Route::get('reserve/accept/{id}','ReservationController@accept')->name('hotel.reserve.accept');
         Route::get('reserve/reject/{id}','ReservationController@reject')->name('hotel.reserve.reject');
+        Route::post('reserve/end/{id}','ReservationController@end')->name('hotel.reserve.end');
     });
 
 

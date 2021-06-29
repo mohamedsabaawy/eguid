@@ -59,6 +59,10 @@
                                 </div>
 
                         </div>
+                        <form method="post" action="{{route('hotel.reserve.end',$room->id)}}">
+                            @csrf
+                            <button class="btn btn-warning form-control">End reservation</button>
+                        </form>
                         @else
                             <div class="row justify-content-center">
                                 <h3 class="">no data</h3>

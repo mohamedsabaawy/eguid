@@ -113,10 +113,9 @@
             </div>
             <div class="service-content">
                 <h2>Discover Hotels</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis tempore officia
-                    accusamus asperiores. Illum maxime eligendi necessitatibus laudantium iste nisi pariatur doloremque
-                    ut illo similique voluptatum enim distinctio perferendis, ad ipsam aspernatur omnis rem autem ex,
-                    reiciendis corporis suscipit!</p>
+                <p>Discover with us many hotels, you can find the hotel that suits you in terms of room numbers, quality, capacity and view of each room,
+                    Big discounts on hotels in 120,000 travel destinations around the world. Browse hotel reviews and find the best price guaranteed for hotels for all budgets.
+                    Find what you want with us.</p>
 
             </div>
         </article>
@@ -141,37 +140,37 @@
         <!-- single service -->
 
 
-        <article class="service">
-            <div class="service-icon">
-                        <span>
-                            <i class="fas fa-broom"></i>
-                        </span>
-            </div>
-            <div class="service-content">
-                <h2>Housekeeping</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis tempore officia
-                    accusamus asperiores. Illum maxime eligendi necessitatibus laudantium iste nisi pariatur doloremque
-                    ut illo similique voluptatum enim distinctio perferendis, ad ipsam aspernatur omnis rem autem ex,
-                    reiciendis corporis suscipit!</p>
+{{--        <article class="service">--}}
+{{--            <div class="service-icon">--}}
+{{--                        <span>--}}
+{{--                            <i class="fas fa-broom"></i>--}}
+{{--                        </span>--}}
+{{--            </div>--}}
+{{--            <div class="service-content">--}}
+{{--                <h2>Housekeeping</h2>--}}
+{{--                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis tempore officia--}}
+{{--                    accusamus asperiores. Illum maxime eligendi necessitatibus laudantium iste nisi pariatur doloremque--}}
+{{--                    ut illo similique voluptatum enim distinctio perferendis, ad ipsam aspernatur omnis rem autem ex,--}}
+{{--                    reiciendis corporis suscipit!</p>--}}
 
-            </div>
-        </article>
+{{--            </div>--}}
+{{--        </article>--}}
         <!-- end of single service -->
         <!-- single service -->
-        <article class="service">
-            <div class="service-icon">
-                        <span>
-                            <i class="fas fa-door-closed"></i>
-                        </span>
-            </div>
-            <div class="service-content">
-                <h2>Room Security</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis tempore officia
-                    accusamus asperiores. Illum maxime eligendi necessitatibus laudantium iste nisi pariatur doloremque
-                    ut illo similique voluptatum enim distinctio perferendis, ad ipsam aspernatur omnis rem autem ex,
-                    reiciendis corporis suscipit!</p>
+{{--        <article class="service">--}}
+{{--            <div class="service-icon">--}}
+{{--                        <span>--}}
+{{--                            <i class="fas fa-door-closed"></i>--}}
+{{--                        </span>--}}
+{{--            </div>--}}
+{{--            <div class="service-content">--}}
+{{--                <h2>Room Security</h2>--}}
+{{--                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis tempore officia--}}
+{{--                    accusamus asperiores. Illum maxime eligendi necessitatibus laudantium iste nisi pariatur doloremque--}}
+{{--                    ut illo similique voluptatum enim distinctio perferendis, ad ipsam aspernatur omnis rem autem ex,--}}
+{{--                    reiciendis corporis suscipit!</p>--}}
 
-            </div>
+{{--            </div>--}}
 
 
         </article>
@@ -196,7 +195,7 @@
         <div class="form-item">
             <label for="room">Rooms: </label>
             <select id="room" name="number">
-                @for($i=0;$i<11;$i++)
+                @for($i=1;$i<11;$i++)
                     <option value="{{$i}}">{{$i}}</option>
                 @endfor
             </select>
@@ -218,70 +217,6 @@
     </form>
 </div>
 
-<section class="rooms sec-width" id="rooms">
-    <div class="title">
-        <h2>rooms</h2>
-    </div>
-    <div class="rooms-container">
-        <!-- single room -->
-        <article class="room">
-            <div class="room-image">
-                <img src="images/img1.jpg" alt="room image">
-            </div>
-            <div class="room-text">
-                <h3>Luxury Rooms</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime
-                    ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur
-                    incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat
-                    nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore,
-                    atque quo?</p>
-
-                <button type="button" class="btn">book now</button>
-            </div>
-        </article>
-        <!-- end of single room -->
-        <!-- single room -->
-        <article class="room">
-            <div class="room-image">
-                <img src="images/img2.jpg" alt="room image">
-            </div>
-            <div class="room-text">
-                <h3>Luxury Rooms</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime
-                    ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur
-                    incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat
-                    nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore,
-                    atque quo?</p>
-
-                <button type="button" class="btn">book now</button>
-            </div>
-        </article>
-        <!-- end of single room -->
-        <!-- single room -->
-        <article class="room">
-            <div class="room-image">
-                <img src="images/img3.jpg" alt="room image">
-            </div>
-            <div class="room-text">
-                <h3>Luxury Rooms</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime
-                    ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur
-                    incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat
-                    nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore,
-                    atque quo?</p>
-
-                <button type="button" class="btn">book now</button>
-            </div>
-        </article>
-        <!-- end of single room -->
-    </div>
-</section>
 
 
 <!-- end of body content -->

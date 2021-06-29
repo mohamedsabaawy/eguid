@@ -46,4 +46,11 @@ class ReservationController extends Controller
         }
         return redirect()->back()->with('status' , 'something error');
     }
+
+    public function end($id){
+        $room = HotelRoom::find($id);
+        $room->client_id = null;
+        $room->save();
+        return redirect()->back()->with('status' ,'reservation ended');
+    }
 }
