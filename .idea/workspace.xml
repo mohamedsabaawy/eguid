@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c3b477-8280-4d86-b380-55ceda0b79fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/public/view/c2SzqJoD78y7dsVJTJML8sbtri4DfOrqb9burPHX.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/public/view/hWBMHrRDUfxj64SqsScwn1YvjacnDvv32kHlg9Fc.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/HotelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Hotel/TypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Hotel/TypeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/RoomType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/RoomType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_19_011218_create_room_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_19_011218_create_room_types_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/hotel/roomType/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hotel/roomType/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/hotel/roomType/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hotel/roomType/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/hotel/roomType/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hotel/roomType/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,7 +401,7 @@
       <workItem from="1624744330192" duration="3276000" />
       <workItem from="1624749702467" duration="9867000" />
       <workItem from="1624767275603" duration="1009000" />
-      <workItem from="1624928836534" duration="3350000" />
+      <workItem from="1624928836534" duration="4033000" />
     </task>
     <servers />
   </component>
