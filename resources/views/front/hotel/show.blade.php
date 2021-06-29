@@ -378,7 +378,7 @@
         <div class="brief">
             <h1>{{$hotel->name}}</h1>
             <p>{{$hotel->details}}</p>
-            <h3>RATING: {{number_format($hotel->rating)}} / 5</h3>
+            <h3>RATING: {{number_format($hotel->rating ,1)}} / 5</h3>
         </div>
     </article>
 

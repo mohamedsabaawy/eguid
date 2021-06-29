@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c3b477-8280-4d86-b380-55ceda0b79fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/seeds/CountrySeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotel/7UaGb9guCtYIrS3QYL8N5G5nuOyk8BoDpiUm4HMG.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/hotel/searche.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/hotel/searche.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -401,7 +404,7 @@
       <workItem from="1624744330192" duration="3276000" />
       <workItem from="1624749702467" duration="9867000" />
       <workItem from="1624767275603" duration="1009000" />
-      <workItem from="1624928836534" duration="4033000" />
+      <workItem from="1624928836534" duration="6162000" />
     </task>
     <servers />
   </component>
