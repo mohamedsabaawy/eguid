@@ -107,14 +107,12 @@
                     url: '{{url('api/v1/city?country_id=')}}' + country_id,
                     type: 'post',
                     success: function (data) {
-                        if (data.status == 1) {
 
                             $('#cities').empty();
                             // $('#cities').append('<option>select city</option>');
-                            $.each(data.data, function (index, city) {
+                            $.each(data, function (index, city) {
                                 $('#cities').append('<option value="' + city.id + '">' + city.name + '</option>')
                             })
-                        }
                     },
                 })
             } else {

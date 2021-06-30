@@ -556,6 +556,31 @@
     </div>
 </section>
 
+@if(count($landmarks) > 0)
+    <section class="landmarks">
+        <div class="title" id="land">
+            <h2>landmark</h2>
+        </div>
+        <div class="slider-container">
+            @foreach($landmarks as $landmark)
+                <div class="slide">
+                    <img src="{{asset(STORAGE.$landmark->cover)}}" class="slide-img" alt=""/>
+                </div>
+            @endforeach
+        </div>
+        <div class="btn-container">
+            <button type="button" class="prevBtn">
+                prev
+            </button>
+            <button type="button" class="nextBtn">
+                next
+            </button>
+        </div>
+
+
+    </section>
+@endif
+
 
 <!-- footer -->
 <footer class="footer">

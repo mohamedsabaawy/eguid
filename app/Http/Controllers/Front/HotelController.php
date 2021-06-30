@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Hotel;
 use App\Models\HotelRoom;
+use App\Models\Landmark;
 use App\Models\RoomType;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,8 @@ class HotelController extends Controller
 
     public function show(Hotel $hotel)
     {
+        $landmarks = Landmark::where('city_id' , $hotel->City->id)->get();
         $views = RoomType::where('hotel_id' ,$hotel->id)->get();
-        return view('front.hotel.show',compact('hotel','views'));
+        return view('front.hotel.show',compact('hotel','views','landmarks'));
     }
 }

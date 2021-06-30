@@ -111,7 +111,7 @@
                         </span>
             </div>
             <div class="service-content">
-                <h2>Discover Hotels</h2>
+                <h2>Hotels</h2>
                 <p>Discover with us many hotels, you can find the hotel that suits you in terms of room numbers, quality, capacity and view of each room,
                     Big discounts on hotels in 120,000 travel destinations around the world. Browse hotel reviews and find the best price guaranteed for hotels for all budgets.
                     Find what you want with us.</p>
@@ -131,7 +131,7 @@
                 <p>You can book a restaurant in a few clicks.
                     Get food in seconds, service just got easier
                     There are a lot of restaurants nearby wherever
-                    you will get your favorite meal.</p>
+                    you will get your favorite <meal class=""></meal></p>
 
             </div>
         </article>
