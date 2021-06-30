@@ -83,6 +83,7 @@ Route::group(['prefix' => '/home', 'namespace' => 'Hotel'], function () {
         Route::resource('photo', 'PhotoController');
         Route::resource('room', 'RoomController');
         Route::resource('type', 'TypeController');
+        Route::resource('menu', 'MenuController');
         Route::get('reserve','ReservationController@index')->name('hotel.reserve');
         Route::get('reserve/accept/{id}','ReservationController@accept')->name('hotel.reserve.accept');
         Route::get('reserve/reject/{id}','ReservationController@reject')->name('hotel.reserve.reject');

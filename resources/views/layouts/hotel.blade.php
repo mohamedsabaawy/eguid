@@ -233,6 +233,16 @@
                         <p>{{auth('hotel')->user()->restaurant == null ? 'Rooms Type' : 'Tables Type'}}</p>
                     </a>
                 </li>
+
+                @if(!auth('hotel')->user()->restaurant == null)
+                    <li class="nav-item">
+                        <a href="{{url(route('menu.index'))}}" class="nav-link">
+                            <i class="nav-icon fas fa-hotel"></i>
+                            <p>Menu</p>
+                        </a>
+                    </li>
+                @endif
+
                 {{--                <li class="nav-item">--}}
                 {{--                    <a href="{{url(route('city.index'))}}" class="nav-link">--}}
                 {{--                        <i class="nav-icon fas fa-city"></i>--}}

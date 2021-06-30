@@ -42,9 +42,8 @@
 
     <div class="head-bottom flex">
         <h2>YOUR PERSONAL GUIDE</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est quos veniam impedit numquam itaque
-            voluptatum, dicta asperiores accusamus, eligendi neque ut incidunt, modi harum molestiae atque natus officia
-            minima.</p>
+        <p>The proposed E-Guide project aims to help the tourists to get hotels and restaurant in a smooth way by our web site and android application.
+            Easy and quick access to nearby hotels and restaurants to book and provide hotel services remotely.</p>
         <a href="#services">
             <button type="button" class="head-btn">GET STARTED</button>
         </a>
@@ -124,11 +123,11 @@
         <article class="service">
             <div class="service-icon">
                         <span>
-                            <i class="fas fa-umbrella"></i>
+                            <i class="fas fa-utensils"></i>
                         </span>
             </div>
             <div class="service-content">
-                <h2>Weather Report</h2>
+                <h2>Restaurant</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis tempore officia
                     accusamus asperiores. Illum maxime eligendi necessitatibus laudantium iste nisi pariatur doloremque
                     ut illo similique voluptatum enim distinctio perferendis, ad ipsam aspernatur omnis rem autem ex,

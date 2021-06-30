@@ -5,8 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c3b477-8280-4d86-b380-55ceda0b79fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Hotel/MenuController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_012706_create_menus_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotel/284AfBVoPlj3wqsoNfdaFRxqwDzSgABCHDyoGM9h.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotel/sRCoV9ljYgRzGMCobLL07mKB9zYZiStenUDlDwJi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/8NlBNxyONJjvUvSHzQFnfQYq01XRrLyIjR8QeG3y.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/DJvls7AuIq3AZHoTuOKoGngzu2neiJ8YpSljFm5m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/K00p6fjwwQ6CqUdIpSxlzxsABKZzORUTriTVoQMX.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/aRmMCPaq09ePDUGkM7i9hhifcs8eHf7QAI2QU1yY.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/cAS0UUpYjDEi4GkzqhmhC6re2wDIjIENbRaNs3Uj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/eCw3oaPbOY4zQB9EOXsKqUBYJRde1BsJRIHlSBFp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/feXQpinF5wIyxLLOD0A76VBp6xyfc8AgAG03RqZg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/iP7WkkATNHqw46hxdh8KlTaTjP4G0aaWpcqYdwxr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/hotelPhoto/svS2mN3SBc3jAaoz8E6k1WjFYm31fQLNU6DBkDgJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/view/1h3j2MmjrrUm10Jve4tiR4it67z7ODwiNz4SG8an.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/view/PW4DIaWgU9jbUzUXSZGvOepf3m6Fx6HWyMIl42uf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/view/S1oJo2vVQSvSRuDThZ2ZHUeE7ATIPb3OOQw77Vgu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/view/TG5oJ1sYfJhqQJJfwuwlhHRE6HbVjSXO0XN4pQMf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/public/view/j7ZJFYLLHRgXgBkNo0EyUlREdFWBHiDvo9XVMQJB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/hotel/menu/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/hotel/menu/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/hotel/menu/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendorq.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/hotel/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +323,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload D:/htdocs/giud/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Hotel" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -305,11 +332,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\giud1\app\Http\Controllers\Hotel" />
+      <recent name="D:\htdocs\giud1\resources\views\hotel" />
       <recent name="D:\htdocs\giud1\app\Http\Middleware" />
       <recent name="D:\htdocs\giud1\resources\views\backend" />
       <recent name="D:\htdocs\giud1\database\seeds" />
-      <recent name="D:\htdocs\giud1\app\Http\Resources" />
-      <recent name="D:\htdocs\giud1\app\Http\Controllers\API" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\htdocs\giud\app\Http\Controllers\Hotel" />
@@ -401,7 +428,7 @@
       <workItem from="1624749702467" duration="9867000" />
       <workItem from="1624767275603" duration="1009000" />
       <workItem from="1624928836534" duration="13792000" />
-      <workItem from="1624998046945" duration="3654000" />
+      <workItem from="1624998046945" duration="7287000" />
     </task>
     <servers />
   </component>

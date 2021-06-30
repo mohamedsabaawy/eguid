@@ -52,4 +52,9 @@ class Hotel extends Authenticatable
         return $this->Clients()->average('review');
     }
 
+    public function menu()
+    {
+        return $this->hasMany(Menu::class,'restaurant_id');
+    }
+
 }

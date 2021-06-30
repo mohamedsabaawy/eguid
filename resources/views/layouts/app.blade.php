@@ -209,6 +209,7 @@
                         <p>Landmarks</p>
                     </a>
                 </li>
+
 {{--                <li class="nav-item">--}}
 {{--                    <a href="{{url(route(''))}}" class="nav-link">--}}
 {{--                        <i class="nav-icon fas fa-address-card"></i>--}}
