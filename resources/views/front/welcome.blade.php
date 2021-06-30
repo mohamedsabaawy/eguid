@@ -128,10 +128,10 @@
             </div>
             <div class="service-content">
                 <h2>Restaurant</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis tempore officia
-                    accusamus asperiores. Illum maxime eligendi necessitatibus laudantium iste nisi pariatur doloremque
-                    ut illo similique voluptatum enim distinctio perferendis, ad ipsam aspernatur omnis rem autem ex,
-                    reiciendis corporis suscipit!</p>
+                <p>You can book a restaurant in a few clicks.
+                    Get food in seconds, service just got easier
+                    There are a lot of restaurants nearby wherever
+                    you will get your favorite meal.</p>
 
             </div>
         </article>
