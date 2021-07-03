@@ -22,7 +22,6 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-//        dd('kmml');
         $restaurants = Hotel::restaurant()->get();
         return view('backend/restaurant/index', compact('restaurants'));
     }
@@ -47,7 +46,6 @@ class RestaurantController extends Controller
      */
     public function store(HotelRequest $request)
     {
-//        return $request->all();
         Hotel::create([
             'name' => $request->name,
             'email' => $request->email,

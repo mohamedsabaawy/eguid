@@ -47,7 +47,6 @@ class LandmarkController extends Controller
      */
     public function store(LandmarkRequest $request)
     {
-//        dd($request->all());
         Landmark::create([
             'name' =>$request->name,
             'details' =>$request->details,
@@ -90,7 +89,6 @@ class LandmarkController extends Controller
      */
     public function update(Request $request, Landmark $landmark)
     {
-//        dd($request->all());
         if($request->cover <> null){
             Storage::disk('public')->delete($landmark->cover);
             $image = $request->cover->store('imag','public') ;

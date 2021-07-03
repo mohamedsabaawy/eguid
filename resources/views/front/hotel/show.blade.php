@@ -20,17 +20,14 @@
             background: #2e2e2e;
             flex-wrap: wrap;
         }
-
         .pic {
             flex-basis: 400px;
             flex: 1;
 
         }
-
         #photo {
             height: 500px;
         }
-
         .brief {
             flex-basis: 400px;
             flex: 2;
@@ -41,7 +38,7 @@
         }
 
         h1 {
-            border-bottom: 5px solid;
+            border-bottom: 5px solid ;
             width: 180px;
             margin-bottom: 15px;
 
@@ -65,7 +62,7 @@
             position: absolute;
             background-color: #2e2e2e;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
         }
 
@@ -75,9 +72,12 @@
         }
 
 
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+
 
 
         /*
@@ -130,6 +130,7 @@
         }
 
 
+
         .landmarks,
         ::after,
         ::before {
@@ -137,26 +138,21 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         .landmarks {
             font-family: var(--ff-secondary);
             color: var(--clr-grey-1);
             line-height: 1.5;
 
         }
-
         .landmarks ul {
             list-style-type: none;
         }
-
         .landmarks a {
             text-decoration: none;
         }
-
         .landmarks img:not(.person-img) {
             width: 100%;
         }
-
         .landmarks img {
             display: block;
         }
@@ -171,49 +167,38 @@
             margin-bottom: 0.75rem;
 
         }
-
         .landmarks h1 {
             font-size: 3rem;
         }
-
         .landmarks h2 {
             font-size: 2rem;
         }
-
         .landmarks h3 {
             font-size: 1.25rem;
         }
-
         .landmarks h4 {
             font-size: 0.875rem;
         }
-
         .landmarks p {
             margin-bottom: 1.25rem;
             color: var(--clr-grey-5);
         }
-
         @media screen and (min-width: 800px) {
             .landmarks h1 {
                 font-size: 4rem;
             }
-
             .landmarks h2 {
                 font-size: 2.5rem;
             }
-
             .landmarks h3 {
                 font-size: 1.75rem;
             }
-
             .landmarks h4 {
                 font-size: 1rem;
             }
-
             body .landmarks {
                 font-size: 1rem;
             }
-
             .landmarks h1,
             h2,
             h3,
@@ -221,7 +206,6 @@
                 line-height: 1;
             }
         }
-
         /*  global classes */
 
         .landmarks .btn {
@@ -238,12 +222,10 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
             border-radius: var(--radius);
         }
-
         .landmarks .btn:hover {
             color: var(--clr-white);
             background: var(--clr-black);
         }
-
         /* section */
         .section {
             padding: 5rem 0;
@@ -254,19 +236,16 @@
             margin: 0 auto;
             max-width: 1170px;
         }
-
         @media screen and (min-width: 992px) {
             .section-center {
                 width: 95vw;
             }
         }
-
         main {
             min-height: 100vh;
             display: grid;
             place-items: center;
         }
-
         /*
         ===============
         Slider
@@ -336,13 +315,11 @@
                 height: 45vh;
             }
         }
-
         @media screen and (min-width: 768px) {
             .slider-container {
                 height: 55vh;
             }
         }
-
         @media screen and (min-width: 992px) {
             .slider-container {
                 height: 65vh;
@@ -354,6 +331,13 @@
             margin-left: 90px;
         }
 
+
+
+
+
+        #review {
+            background: none;
+        }
 
     </style>
 </head>
@@ -420,43 +404,7 @@
 
 
 <!-- side navbar -->
-<div class="sidenav" id="sidenav">
-                    <span class="cancel-btn" id="cancel-btn">
-                        <i class="fas fa-times"></i>
-                    </span>
-
-    <ul class="navbar">
-        @auth('client')
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">{{auth('client')->user()->name}}</a>
-                <div class="dropdown-content">
-                    <a href="#">Profile</a>
-                    <form action="{{route('client.logout')}}" method="post">
-                        @csrf
-                        <button class="btn log-out">log out</button>
-                    </form>
-                </div>
-            </li>
-        @endauth
-
-        <li><a href="{{route('front.welcome')}}">home</a></li>
-        <li><a href="{{route('front.restaurant.index')}}">restaurants</a></li>
-        <li><a href="#services">services</a></li>
-        <li><a href="#rooms">rooms</a></li>
-
-    </ul>
-
-    @guest('client')
-        <form action="{{route('client.form.register')}}" method="get">
-            @csrf
-            <button class="btn sign-up">sign up</button>
-        </form>
-        <form action="{{route('client.form.login')}}" method="get">
-            @csrf
-            <button class="btn log-in">log in</button>
-        </form>
-    @endguest
-</div>
+@include('layouts.nav.nav')
 <!-- end of side navbar -->
 
 
@@ -483,14 +431,6 @@
                 </span>
             @enderror
         </div>
-
-        {{--        <div class="form-item">--}}
-        {{--            <label for="room">Room Type: </label>--}}
-        {{--            <select id="room" name="room">--}}
-        {{--                <option value="single">Single</option>--}}
-        {{--                <option value="double">Double</option>--}}
-        {{--            </select>--}}
-        {{--        </div>--}}
 
         <div class="form-item">
             <label for="rooms">Rooms: </label>
@@ -554,6 +494,37 @@
             @endforeach
         </div>
     </div>
+
+
+    <div class = "book" id="review">
+        <form class = "book-form" id="form" method="post" action="{{route('client.review')}}">
+            @csrf
+
+            <div class = "form-item">
+                <label for = "heading">Add a header: </label>
+                <input type = "text" id = "heading" name="title" required>
+                <input type = "hidden" id = "heading" value="{{$hotel->id}}" name="hotel_id">
+            </div>
+
+            <div class = "form-item">
+                <label for = "comment">Add a comment: </label>
+                <input type = "text" id = "comment" name="comment" required>
+            </div>
+
+            <div class="form-item">
+                <label for="rooms">review: </label>
+                <input type="number" min="1" max="5" value="1" id="rooms" name="review" required>
+                @error('number')
+                @enderror
+            </div>
+
+
+            <div class = "form-item">
+                <input type = "submit" id="sub" class = "btn" value = "Post">
+            </div>
+        </form>
+    </div>
+
 </section>
 
 @if(count($landmarks) > 0)

@@ -7,6 +7,7 @@ use App\Http\Requests\ClientRequest;
 use App\Models\Client;
 use App\Models\Hotel;
 use App\Models\HotelRoom;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use phpDocumentor\Reflection\Type;
@@ -38,7 +39,6 @@ class ClientController extends Controller
         $client = $request->only(['email', 'password']);
         if (Auth::guard('client')->attempt($client)) {
             return redirect()->route('front.welcome');
-//            return redirect()->intended(route('front.welcome'));
         }
         return redirect()->back()->with('status', 'please enter valid data');
 
@@ -56,9 +56,6 @@ class ClientController extends Controller
             'end_at' => 'required|date',
             'number' => 'required',
         ]);
-
-//        if(!strtotime($request->end_at) > strtotime($request->end_at))
-//            return redirect()->back()->with('status' ,'check out must be > check in');
         $d = strtotime($request->end_at) - strtotime($request->start_at) ;
         if($d == 0){
            return redirect()->back()->with('status','check out must be > check in');
@@ -72,11 +69,28 @@ class ClientController extends Controller
 
 
         if ($room <> null){
-            Auth::guard('client')->user()->HotelRooms()->attach($room,['start_at'=>$request->start_at ,'end_at'=>$request->end_at,'price'=>($room->RoomType->price * $day)]);
+            Auth::guard('client')->user()->HotelRooms()->attach($room,['start_at'=>$request->start_at ,'end_at'=>$request->end_at,'price'=>($day * $room->price)]);
             $room->client_id = Auth::guard('client')->id();
             $room->save();
             return redirect()->back()->with('status' , 'your request sent to accept please waite');
         }
         return redirect()->back()->with('status' ,'sorry no room');
     }
+
+    public function review(Request $request)
+    {
+        if (Hotel::hotel()->find($request->hotel_id)) {
+            Review::create([
+                'title' => $request->title,
+                'comment' => $request->comment,
+                'hotel_id' => $request->hotel_id,
+                'client_id' => $request->user()->id,
+                'review' => $request->review,
+            ]);
+            return redirect()->back()->with('status', 'add');
+        }
+        return redirect()->back();
+    }
+
+
 }

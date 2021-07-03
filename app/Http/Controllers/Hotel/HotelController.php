@@ -42,7 +42,6 @@ class HotelController extends Controller
            'cover' =>$request->cover,
            'password' =>($request->password == null ? $hotel->password : bcrypt($request->password)),
        ]);
-//       $hotel->save();
         return redirect(route('hotel'))->with('status','hotel updated');
     }
 

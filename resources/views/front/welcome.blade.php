@@ -53,43 +53,7 @@
 
 <!-- side navbar -->
 
-<div class="sidenav" id="sidenav">
-                    <span class="cancel-btn" id="cancel-btn">
-                        <i class="fas fa-times"></i>
-                    </span>
-
-    <ul class="navbar">
-        @auth('client')
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">{{auth('client')->user()->name}}</a>
-                <div class="dropdown-content">
-                    <a href="#">Profile</a>
-                    <form action="{{route('client.logout')}}" method="post">
-                        @csrf
-                        <button class="btn log-out">log out</button>
-                    </form>
-                </div>
-            </li>
-        @endauth
-
-        <li><a href="{{route('front.welcome')}}">home</a></li>
-        <li><a href="{{route('front.restaurant.index')}}">restaurants</a></li>
-        <li><a href="#services">services</a></li>
-        <li><a href="#rooms">rooms</a></li>
-
-    </ul>
-
-    @guest('client')
-        <form action="{{route('client.form.register')}}" method="get">
-            @csrf
-            <button class="btn sign-up">sign up</button>
-        </form>
-        <form action="{{route('client.form.login')}}" method="get">
-            @csrf
-            <button class="btn log-in">log in</button>
-        </form>
-    @endguest
-</div>
+@include('layouts.nav.nav')
 
 <!-- end of side navbar -->
 

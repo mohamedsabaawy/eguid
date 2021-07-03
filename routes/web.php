@@ -38,6 +38,12 @@ Route::group(['namespace' => 'Front'], function () {
         Route::get('/{restaurant}', 'RestaurantController@show')->name('front.restaurant.show')->middleware('restaurant');  ///show one restaurant for client
     });
 
+    Route::group([],function (){
+        Route::get('map','WelcomeController@map')->name('front.map');
+        Route::get('otherSites','WelcomeController@otherSites')->name('front.otherSites');
+        Route::get('museums','WelcomeController@museums')->name('front.museums');
+    });
+
     //client routes
     Route::group([],function(){
         Route::get('client/register' , 'ClientController@registerForm')->name('client.form.register')->middleware('guest:client');
@@ -45,14 +51,15 @@ Route::group(['namespace' => 'Front'], function () {
         Route::get('client/login' , 'ClientController@loginForm')->name('client.form.login')->middleware('guest:client');
         Route::post('client/login' , 'ClientController@login')->name('client.login');
         Route::post('client/logout' , 'ClientController@logout')->name('client.logout');
-            Route::post('client/room' , 'ClientController@room')->name('room1')->middleware('auth:client');
+        Route::post('client/room' , 'ClientController@room')->name('room1')->middleware('auth:client');
+        Route::post('client/review' , 'ClientController@review')->name('client.review')->middleware('auth:client');
     });
 
 });
 
-Auth::routes(['register' => false]);
-
 //----------------------admin routes----------------//
+
+Auth::routes(['register' => false]);
 
 Route::get('/admin', 'HomeController@index')->name('home');
 Route::group(['namespace' => 'BackEnd', 'middleware' => 'auth', 'prefix' => '/admin'], function () {
@@ -92,3 +99,5 @@ Route::group(['prefix' => '/home', 'namespace' => 'Hotel'], function () {
 
 
 });
+
+

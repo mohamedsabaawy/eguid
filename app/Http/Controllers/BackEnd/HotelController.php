@@ -48,7 +48,6 @@ class HotelController extends Controller
      */
     public function store(HotelRequest $request)
     {
-//        return $request->all();
         Hotel::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -121,7 +120,6 @@ class HotelController extends Controller
 
     public function review(Request $request)
     {
-//        dd($request->all());
         Review::create($request->all());
         return redirect()->back()->with('status' , 'add');
     }

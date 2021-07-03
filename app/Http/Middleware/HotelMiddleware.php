@@ -15,7 +15,6 @@ class HotelMiddleware
      */
     public function handle($request, Closure $next)
     {
-//        dd($request->route('hotel')->id);
         if($request->route('hotel')->restaurant == null){
             return $next($request);
         }

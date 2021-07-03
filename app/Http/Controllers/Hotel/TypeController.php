@@ -44,7 +44,6 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
         $room = RoomType::create([
            'name'=>$request->name,
            'details'=>$request->details,
@@ -102,7 +101,6 @@ class TypeController extends Controller
             'details'=>$request->details,
             'cover'=> $photo,
         ]);
-//        return $type;
         return redirect()->route('type.index')->with('status' , 'room type updated');
     }
 
