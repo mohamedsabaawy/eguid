@@ -147,12 +147,7 @@
         @csrf
         <div class="form-item">
             <label for="checkin-date">Check In Date: </label>
-            <input type="date" id="chekin-date" name="start_at">
-        </div>
-
-        <div class="form-item">
-            <label for="checkout-date">Check Out Date: </label>
-            <input type="date" id="chekout-date" name="end_at">
+            <input type="date" id="chekin-date" name="start_at" required>
         </div>
 
         <div class="form-item">
