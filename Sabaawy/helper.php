@@ -13,7 +13,9 @@ function responseJson($status , $msg , $data=null){
 };
 
 function getCity(){
-    $city = 1;
+    $city = [
+        'id' => '1'
+    ];
     if(Auth::user())
         $city = [
             'id' =>Auth::user()->city_id,
