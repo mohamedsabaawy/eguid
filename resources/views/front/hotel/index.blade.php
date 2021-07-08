@@ -164,7 +164,7 @@
                     </div>
                     <div class="brief">
                         <h3>{{$hotel->name}}</h3>
-                        <p>{{(strlen($hotel->details) > 200 ? substr($hotel->details , 0 ,200).' ......' : $hotel->hotel->details)}}</p>
+                        <p>{{(strlen($hotel->details) > 200 ? substr($hotel->details , 0 ,200).' ......' : $hotel->details)}}</p>
                         <h4>RATING: {{number_format($hotel->rating , 1)}} / 5</h4>
                     </div>
                 </article>
