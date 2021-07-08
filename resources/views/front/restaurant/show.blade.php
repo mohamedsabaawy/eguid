@@ -11,11 +11,9 @@
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
 
 
-
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
     <!--Fonts-->
-
 
 
     <style>
@@ -141,7 +139,7 @@
         }
 
         button,
-        .dots>div,
+        .dots > div,
         header nav .toggle,
         header .arrow-down,
         .menu .box-model .close,
@@ -179,7 +177,6 @@
         }
 
         /*End Mutual*/
-
 
 
         /*Start Home Page*/
@@ -325,8 +322,7 @@
         }
 
         .menu .text h3 {
-            color: #000;
-        ;
+            color: #000;;
         }
 
         .menu .text .fa-asterisk {
@@ -414,7 +410,6 @@
         }
 
 
-
         @media (max-width: 576px) {
 
             h3,
@@ -443,9 +438,6 @@
         /*End Home Page Responsive*/
 
 
-
-
-
         .booking {
             width: 60%;
             margin: auto;
@@ -467,10 +459,6 @@
         .change-to-white {
             color: #fff;
         }
-
-
-
-
 
 
         table {
@@ -512,24 +500,15 @@
         }
 
 
-
-
         #see-menu {
             text-align: center;
         }
     </style>
 
 
-
-
-
-
 </head>
 
 <body class="stop-scroll">
-
-
-
 
 
 <!--Start Header-->
@@ -546,8 +525,6 @@
     </div>
 
 
-
-
     <div class="text">
         <h2>Welcome to</h2>
         <h1>{{$restaurant->name}}</h1>
@@ -556,15 +533,10 @@
 <!--End Header-->
 
 
-
-
 <!-- side navbar -->
 @include('layouts.nav.nav')
 
 <!-- end of side navbar -->
-
-
-
 
 
 <!--start About Us-->
@@ -650,7 +622,6 @@
     </div>
 
 
-
 </div>
 <!--End fixed-image-->
 
@@ -662,8 +633,6 @@
         <p>We promise an intimate and relaxed dining experience that offers something different to local and foreign
             patrons and ensures you enjoy a memorable food experience every time.</p>
     </div>
-
-
 
 
     <div class="image-container">
@@ -681,11 +650,6 @@
 </div>
 
 
-
-
-
-
-
 <div>
 
     <div id="see-menu">
@@ -693,42 +657,48 @@
     </div>
 
     <table>
-        <tr>
-            <td><span>Just Eggs</span></td>
-            <td><span>5 L.E</span></td>
-        </tr>
-        <tr>
-            <td><span>Rotini Pasta</span></td>
-            <td><span>35 L.E</span></td>
-        </tr>
-        <tr>
-            <td><span>Cannelloni</span></td>
-            <td><span>45 L.E</span></td>
-        </tr>
-        <tr>
-            <td><span>Fettuccine Pasta</span></td>
-            <td><span>50 L.E</span></td>
-        </tr>
-        <tr>
-            <td><span>Ravioli</span></td>
-            <td><span>50 L.E</span></td>
-        </tr>
-        <tr>
-            <td><span>Linguine</span></td>
-            <td><span>69 L.E</span></td>
-        </tr>
-        <tr>
-            <td><span>Cappelletti</span></td>
-            <td><span>45 L.E</span></td>
-        </tr>
-        <tr>
-            <td><span>Pici</span></td>
-            <td><span>35 L.E</span></td>
-        </tr>
+        @foreach($restaurant->menu as $food)
+            <tr>
+                <td><span>{{$food->name}}</span></td>
+                <td><span>{{$food->price}} L.E</span></td>
+            </tr>
+            @endforeach
+
+
+                <tr>
+                    <td><span>Just Eggs</span></td>
+                    <td><span>5 L.E</span></td>
+                </tr>
+                <tr>
+                    <td><span>Rotini Pasta</span></td>
+                    <td><span>35 L.E</span></td>
+                </tr>
+                <tr>
+                    <td><span>Cannelloni</span></td>
+                    <td><span>45 L.E</span></td>
+                </tr>
+                <tr>
+                    <td><span>Fettuccine Pasta</span></td>
+                    <td><span>50 L.E</span></td>
+                </tr>
+                <tr>
+                    <td><span>Ravioli</span></td>
+                    <td><span>50 L.E</span></td>
+                </tr>
+                <tr>
+                    <td><span>Linguine</span></td>
+                    <td><span>69 L.E</span></td>
+                </tr>
+                <tr>
+                    <td><span>Cappelletti</span></td>
+                    <td><span>45 L.E</span></td>
+                </tr>
+                <tr>
+                    <td><span>Pici</span></td>
+                    <td><span>35 L.E</span></td>
+                </tr>
 
     </table>
-
-
 
 
 </div>

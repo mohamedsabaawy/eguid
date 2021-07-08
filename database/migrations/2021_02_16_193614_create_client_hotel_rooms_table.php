@@ -21,7 +21,7 @@ class CreateClientHotelRoomsTable extends Migration
             $table->date('start_at');
             $table->date('end_at');
             $table->double('price');
-            $table->enum('status',[0,1,2])->default(0);
+            $table->integer('status')->default(0);
         });
     }
 

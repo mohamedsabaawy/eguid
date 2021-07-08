@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class ClientHotelRoom extends Pivot
 {
-//    protected $table = 'client_hotel_rooms';
     public $timestamps = true;
-    protected $fillable = array('client_id', 'hotel_room_id','start_at','end_at','price');
+    protected $fillable = array('client_id', 'hotel_room_id','start_at','end_at','price','status');
+
 }

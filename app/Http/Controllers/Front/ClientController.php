@@ -92,5 +92,11 @@ class ClientController extends Controller
         return redirect()->back();
     }
 
+    public function profile()
+    {
+        $rooms = HotelRoom::with('clients')->where('client_id' , '=',Auth::guard('client')->id())->get();
+        return view('front.client.profile' ,compact('rooms'));
+    }
+
 
 }

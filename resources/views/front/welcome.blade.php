@@ -9,6 +9,24 @@
     {{--    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>--}}
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
     <style>
+
+        .selection select {
+            margin-top: 2px;
+            height: 50px;
+            width: 230px;
+            background: var(--dark);
+            color: #fff;
+            border: 0px;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+            opacity: 0.8;
+
+        }
+
+        .selection select:hover {
+            cursor: pointer;
+        }
         .dropdown-content {
             display: none;
             position: absolute;

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{asset('front/main.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
     <style>
+
+
         .header {
             background: none;
 

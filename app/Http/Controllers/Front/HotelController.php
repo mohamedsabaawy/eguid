@@ -9,6 +9,7 @@ use App\Models\HotelRoom;
 use App\Models\Landmark;
 use App\Models\RoomType;
 use Illuminate\Http\Request;
+use function App\Sabaawy\getCity;
 
 class HotelController extends Controller
 {
@@ -21,8 +22,8 @@ class HotelController extends Controller
     }
     public function index()
     {
-        $hotels = Hotel::hotel()->get();
-        return view('front.hotel.search',compact('hotels'));
+        $hotels = Hotel::hotel()->where('city_id',getCity()['id'])->get();
+        return view('front.hotel.index',compact('hotels'));
     }
 
 

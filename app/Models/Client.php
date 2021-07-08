@@ -41,7 +41,7 @@ class Client extends Authenticatable implements JWTSubject
 
     public function HotelRooms()
     {
-        return $this->belongsToMany('App\Models\HotelRoom')->withTimestamps();
+        return $this->belongsToMany('App\Models\HotelRoom')->withTimestamps()->withPivot('start_at','end_at','price','status','id');
     }
 
     public function Hotels()
@@ -52,5 +52,7 @@ class Client extends Authenticatable implements JWTSubject
     public function City(){
         return $this->belongsTo(City::class);
     }
+
+
 
 }

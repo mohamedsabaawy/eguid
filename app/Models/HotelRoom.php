@@ -37,4 +37,6 @@ class HotelRoom extends Model
         return $this->belongsTo(View::class,'view_id','id');
     }
 
+
+
 }
