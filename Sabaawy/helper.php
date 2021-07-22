@@ -20,7 +20,7 @@ function getCity(){
     if(Auth::user())
         $city = [
             'id' => (Auth::user()->city_id ? Auth::user()->city_id : 1),
-            'name' => (Auth::user()->City->name ? Auth::user()->City->name : 'sharm')
+            'name' => (Auth::user()->City->name ? Auth::user()->City->name : 'sharm'),
         ];
     elseif (session()->has('city_id'))
         $city = [

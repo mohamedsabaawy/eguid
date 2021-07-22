@@ -74,7 +74,7 @@
 <header class="customers" id="customers">
     <div class="head-top">
         <div class="site-name">
-            <span>E-GUIDE</span>
+            <span  onclick="window.location.href='{{route('front.welcome')}}'">E-GUIDE</span>
         </div>
         <div class="site-nav">
             <span id="nav-btn">MENU <i class="fas fa-bars"></i></span>
@@ -94,7 +94,8 @@
                         <a href="{{route('front.restaurant.show' ,$restaurant->id)}}" id="fres">
                             <div class="customer">
                                 <h3>{{$restaurant->name}}</h3>
-                                <p>{{$restaurant->details}}</p>
+                                <p>Rating : {{number_format($restaurant->rating,1)}}</p>
+                                <p>{{strlen($restaurant->details) > 65 ? substr($restaurant->details,65).' .....' : $restaurant->details}}</p>
                                 <img src="{{asset(STORAGE.$restaurant->cover)}}" alt="customer image">
 
                             </div>

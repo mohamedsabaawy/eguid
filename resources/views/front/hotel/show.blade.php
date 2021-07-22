@@ -347,7 +347,7 @@
 <header class="header" id="header">
     <div class="head-top">
         <div class="site-name">
-            <span style="color: var(--dark);">E-GUIDE</span>
+            <span onclick="window.location.href='{{route('front.welcome')}}'" style="color: var(--dark);">E-GUIDE</span>
         </div>
         <div class="site-nav">
             <span style="color: var(--dark);" id="nav-btn">MENU <i class="fas fa-bars"></i></span>

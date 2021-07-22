@@ -22,7 +22,7 @@ class HotelController extends Controller
     }
     public function index()
     {
-        $hotels = Hotel::hotel()->where('city_id',getCity()['id'])->get();
+        $hotels = Hotel::with('clients')->hotel()->where('city_id',getCity()['id'])->get();
         return view('front.hotel.index',compact('hotels'));
     }
 

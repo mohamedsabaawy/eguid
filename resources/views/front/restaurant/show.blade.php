@@ -517,7 +517,7 @@
 
     <div class="head-top">
         <div class="site-name">
-            <span class="change-to-white">E-GUIDE</span>
+            <span  onclick="window.location.href='{{route('front.welcome')}}'" class="change-to-white">E-GUIDE</span>
         </div>
         <div class="site-nav">
             <span class="change-to-white" id="nav-btn">MENU <i class="fas fa-bars"></i></span>
@@ -660,7 +660,7 @@
         @foreach($restaurant->menu as $food)
             <tr>
                 <td><span>{{$food->name}}</span></td>
-                <td><span>{{$food->price}} L.E</span></td>
+                <td><span>{{$food->price .' L.E'}}</span></td>
             </tr>
             @endforeach
 
